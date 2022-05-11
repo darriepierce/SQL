@@ -29,7 +29,7 @@ SELECT *
 FROM clothing
 ORDER BY size;
 
---How many items are in the database.
+--How many items are in the database?
 SELECT SUM(quantity)
 FROM clothing;
 
