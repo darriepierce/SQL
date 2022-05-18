@@ -1,0 +1,34 @@
+CREATE TABLE MovieStars (
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+fullname TEXT,
+age INTEGER,
+gender TEXT,
+spouse TEXT,
+CurrentResidence TEXT);
+
+INSERT INTO MovieStars (fullname, age, gender, CurrentResidence) VALUES ("Brody McDog", 2, "male", "Cleveland");
+INSERT INTO MovieStars (fullname, age, gender, spouse, CurrentResidence) VALUES ("Joshua Pierce",47, "male", "Darrie Mom", "Cleveland");
+INSERT INTO MovieStars (fullname, age, gender, spouse, CurrentResidence) VALUES ("Darrie Pierce", 47, "female", "Josh Dad", "Cleveland");
+INSERT INTO MovieStars (fullname, age, gender, CurrentResidence) VALUES ("Bjoe",18, "male", "Charleston");
+INSERT INTO MovieStars (fullname, age, gender, spouse, CurrentResidence) VALUES ("RyanO", 27,"male", "Siramba","Cleveland");
+INSERT INTO MovieStars (fullname, age, gender, CurrentResidence) VALUES ("JimCat",19, "male", "Friendswood");
+
+CREATE TABLE Wealth (id INTEGER PRIMARY KEY AUTOINCREMENT, 
+moviestars_id INTEGER,
+net_worth INTEGER,
+top_movies TEXT,
+source_MostMonies TEXT);
+
+INSERT INTO Wealth (moviestars_id, net_worth, top_movies, source_mostmonies) VALUES ("Brody McDog", "3 Million", "Dogs Only","Goodest Dog Photos");
+INSERT INTO Wealth (moviestars_id, net_worth, top_movies, source_mostmonies) VALUES ("Joshua Pierce", "65 Million", "Adventures of Super Dad", "'The Earth is Flat' blog");
+INSERT INTO Wealth (moviestars_id, net_worth, top_movies, source_mostmonies) VALUES ("Darrie Pierce", "500 Million", "Unstoppable", "Getting a better job by learning SQL");
+INSERT INTO Wealth (moviestars_id, net_worth, top_movies, source_mostmonies) VALUES ("Bjoe", "2 Million", "Survival Times", "Self Help YouTube Videos");
+INSERT INTO Wealth (moviestars_id, net_worth, top_movies, source_mostmonies) VALUES ("RyanO","45 Million", "Everybody Hates RyanO", "Everybody Hates RyanO");
+INSERT INTO Wealth (moviestars_id, net_worth, top_movies, source_mostmonies) VALUES ("JimCat", "20 Dollars", "Leaving Home", "Leaving Home");
+
+
+--Join both tables to show who makes the most money.
+SELECT moviestars.fullname, wealth.net_worth
+FROM moviestars
+JOIN wealth
+ON moviestars.fullname = wealth.moviestars_id;
