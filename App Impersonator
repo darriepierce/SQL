@@ -1,0 +1,21 @@
+CREATE TABLE foodwatcher
+(id INTEGER PRIMARY KEY AUTOINCREMENT, 
+name TEXT,
+food TEXT,
+calories INTEGER);
+
+INSERT INTO foodwatcher (name, food, calories) VALUES ("Darrie Pierce", "pizza", "500");
+INSERT INTO foodwatcher (name, food, calories) VALUES ("Josh Pierce", "cup cake", "350");
+INSERT INTO foodwatcher (name, food, calories) VALUES ("Bjoe Pierce", "chicken", "200");
+INSERT INTO foodwatcher (name, food, calories) VALUES ("Jimmy Pierce", "Ramon", "150");
+
+--Update the table.
+UPDATE foodwatcher SET name = "Billy Joe Pierce" 
+WHERE id = 3;
+
+--Delete a row from the table.
+DELETE FROM foodwatcher 
+WHERE ID = 4;
+
+--Check your work.
+SELECT * FROM foodwatcher;
