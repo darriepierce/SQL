@@ -1,0 +1,47 @@
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, item_type TEXT, quantity INTEGER, price INTEGER, size TEXT);
+INSERT INTO clothing VALUES (1, "Blue Shirt", 10, 45.00, "L");
+INSERT INTO clothing VALUES (2, "Blue Shirt", 10, 45.00, "M");
+INSERT INTO clothing VALUES (3, "Blue Shirt", 10, 45.00, "S");
+INSERT INTO clothing VALUES (4, "Khaki Pants", 10, 69.00, "L");
+INSERT INTO clothing VALUES (5, "Khaki Pants", 10, 69.00, "M");
+INSERT INTO clothing VALUES (6, "Khaki Pants", 10, 69.00, "S");
+INSERT INTO clothing VALUES (7, "Jean Shorts", 10, 55.00, "L");
+INSERT INTO clothing VALUES (8, "Jean Shorts", 10, 55.00, "M");
+INSERT INTO clothing VALUES (9, "Jean Shorts", 10, 55.00, "S");
+INSERT INTO clothing VALUES (10, "Sun Dress", 10, 76.00, "L");
+INSERT INTO clothing VALUES (11, "Sun Dress", 10, 70.00, "M");
+INSERT INTO clothing VALUES (12, "Sun Dress", 10, 70.00, "M");
+INSERT INTO clothing VALUES (13, "White Scarf", 10, 27.00, "L");
+INSERT INTO clothing VALUES (14, "Leggings", 5, 35.00, "L");
+INSERT INTO clothing VALUES (15, "White Socks", 20, 20.00, "L");
+INSERT INTO clothing VALUES (16, "Black Panties", 10, 8.00, "L");
+INSERT INTO clothing VALUES (17, "Black Panties", 10, 8.00, "M");
+INSERT INTO clothing VALUES (18, "Black Panties", 10, 8.00, "S");
+INSERT INTO clothing VALUES (19, "Black Bras", 10, 20.00, "L");
+INSERT INTO clothing VALUES (20, "Black Bras", 10, 20.00, "M");
+INSERT INTO clothing VALUES (21, "Black Bras", 10, 20.00, "S");
+INSERT INtO clothing VALUES (22, "White Sneakers", 10, 50.00, "8");
+INSERT INTO clothing VALUES (23, "White Sneakers", 10, 50.00, "9");
+INSERT INTO clothing VALUES (24, "White Sneakers", 10, 50.00, "10");
+
+--Display the database ordered by size.
+SELECT *
+FROM clothing
+ORDER BY size;
+
+--How many items are in the database?
+SELECT SUM(quantity)
+FROM clothing;
+
+--How many pairs of sneakers are there?
+SELECT COUNT (*) shoes
+FROM clothing;
+
+--What is the average price of items?
+SELECT AVG(price) 
+FROM clothing;
+
+--Show how many of each item in database, sort by most. 
+SELECT item_type,quantity
+FROM clothing
+ORDER by quantity DESC;
