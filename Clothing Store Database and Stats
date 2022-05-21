@@ -1,4 +1,8 @@
+--In this SQL project, I created a clothing store database. I then ran queries on the data to answer important questions about the product.
+
 CREATE TABLE clothing (id INTEGER PRIMARY KEY, item_type TEXT, quantity INTEGER, price INTEGER, size TEXT);
+
+
 INSERT INTO clothing VALUES (1, "Blue Shirt", 10, 45.00, "L");
 INSERT INTO clothing VALUES (2, "Blue Shirt", 10, 45.00, "M");
 INSERT INTO clothing VALUES (3, "Blue Shirt", 10, 45.00, "S");
