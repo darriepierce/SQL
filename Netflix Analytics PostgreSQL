@@ -1,4 +1,4 @@
-Example query (PostgreSQL):
+--In this SQL code, I am querying a NetFlix database with PostgreSQL to answer questions about the data.
 
 --Show a few examples of what the database contains.
 SELECT * FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" LIMIT 5;
