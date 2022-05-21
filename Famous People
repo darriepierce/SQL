@@ -1,3 +1,5 @@
+--This is an example of database I created, filled with data on two tables and joined them together.
+
 CREATE TABLE MovieStars (
 id INTEGER PRIMARY KEY AUTOINCREMENT,
 fullname TEXT,
