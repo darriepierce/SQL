@@ -1,3 +1,5 @@
+--This SQL code shows a table I created, added information to, updated, and then deleted information from.
+
 CREATE TABLE foodwatcher
 (id INTEGER PRIMARY KEY AUTOINCREMENT, 
 name TEXT,
@@ -17,5 +19,5 @@ WHERE id = 3;
 DELETE FROM foodwatcher 
 WHERE ID = 4;
 
---Check your work.
+--Check the work completed.
 SELECT * FROM foodwatcher;
