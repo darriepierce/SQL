@@ -1,4 +1,4 @@
---This is a projetc where I downloaded Spotify data from Kaggle.
+--This is a project where I downloaded Spotify data from Kaggle.
 --Then I created a table and inserted the Spotify data.
 --Finally, I performed analytics on the data using SQL. 
 
@@ -23,8 +23,10 @@ tempo decimal(6,3) NOT NULL,
 duration_ms integer NOT NULL,
 time_signature integer NOT NULL)
 
+--Then I inserted the Spotify Data .csv into the table.
 
---SpotifyData Table queries:
+--Next, I explored the data using the following SQL queries:
+
 
 --Which artist has the most popular song?
 SELECT artist_name, popularity
@@ -49,5 +51,17 @@ SELECT duration_ms, track_name, artist_name
 FROM Spotifydata
 ORDER BY DESC
 LIMIT 1
+
+--Determine the avg popularity, danceability, and energy by artist and track. 
+SELECT
+artist_name
+,track_name
+,avg(popularity)
+,avg(danceability)
+,avg(energy)
+FROM BIT_DB.spotifydata
+GROUP BY artist_name, track_name
+
+
 
 
